@@ -66,3 +66,52 @@ img.logo {
     font-weight: 500;
 }
 
+/* Footer */
+
+footer {
+    background-color: var(--white-Smoke);
+    flex: 1 0 auto;
+}
+
+/* info */
+.info-icon {
+    height: 2rem;
+    margin: 1rem;
+}
+
+.info {
+    text-align: center;
+}
+
+.info>li {
+    display: inline;
+}
+
+.info i {
+    font-size: 160%;
+    margin: 1%;
+    padding: 3px;
+    color: var(--green);
+}
+
+/* social icon */
+
+.social-icon {
+    height: 2rem;
+    margin: 1rem;
+}
+
+.social-networks {
+    text-align: center;
+}
+
+.social-networks>li {
+    display: inline;
+}
+
+.social-networks i {
+    font-size: 160%;
+    margin: 1%;
+    padding: 3px;
+    color: var(--green);
+}
