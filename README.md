@@ -1,110 +1,155 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome Edouard102 Trentesaux,
+# **Mae restaurent**
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![responsicemockup]https://ui.dev/amiresponsive?url=https://edouard102.github.io/my_first_project/
+![responsicemockup](assets/images/images_readme/ami_responsive_home.png)
+![testing_html2](assets/images/images_readme/testing_2_html.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Project
+Project Goals
+The main objective of this project was to create a website for a restaurant, providing customers with the opportunity to explore the offer. In addition to allowing users to reserve a table as members or first-time visitors, the application allows these users to update or delete their own reservations. Staff members, on the other hand, can create reservations for customers and have the authority to modify or delete them. In summary, the site aims to offer a comprehensive experience for users and staff in discovering the restaurant and managing reservations.
 
-## Gitpod Reminders
+## User Goals
+UX
+Audience Definition
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+A restaurant is a limited space where not everyone can be accommodated. This place aims to offer future customers a pleasant and friendly experience for a defined period. Regarding the website, it should reflect the type of restaurant, enabling the filtering of a specific clientele. The determination of the potential customer begins with the visit to the website, where they can get an idea of the place.
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+## User Stories
+Here is a concise list of actions that a potential user might consider during their visit to this website:
 
-Another blue button should appear to click: _Open Browser_.
+As a user, I want to:
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Land on a homepage presenting the core content of the site and providing intuitive navigation.
+Access a menu section to get an overview of the available options.
+Learn more about the restaurant and its features.
+Make a reservation without having to subscribe to a newsletter or other services.
+Second Visit:
 
-A blue button should appear to click: _Make Public_,
+As a subscribed user, I want to:
 
-Another blue button should appear to click: _Open Browser_.
+Be able to register on the site to create an account allowing access to the history and future reservations.
+Make new reservations as a registered user.
+Have the option to modify and/or delete the reservations I've made.
+Be able to log out and log back into the site without encountering any specific difficulties.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Input validation and error checking.
+validation
 
-To log into the Heroku toolbelt CLI:
+Features to Implement in the Future Versions
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+While the website fulfills the basic functions of a restaurant site, there are additional features that could be added:
+Visual Gallery: Integrate an attractive photo gallery showcasing the restaurant's ambiance, popular dishes, and special moments to give visitors a better idea of the experience they can expect.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Reviews and Testimonials: Add a section where customers can leave reviews and testimonials. 
+Implementation of a personalized and effective newsletter service that stands out from other newsletter services.
+Integration of a system to send discounts to registered users.
+Online Loyalty Program: Establish an online loyalty program to reward frequent customers with special offers, discounts, or exclusive benefits.
+Reservation Customization Options: Offer customers the ability to specify special requests during reservations, such as dietary preferences or particular celebrations.
 
-------
 
-## Release History
+## Planning
+Project planning was done with Agile methodologies.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**September 20 2023:** Update Python version to 3.9.17.
+## Website Design
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+Color Palette:
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+Primary (Background): #abb8c3 (a shade of gray-blue)
+--white-Smoke: #F9F9F9; 
+Text: green #497569 
+The primary background (gray-blue) will provide an interesting visual contrast.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Fonts:
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Headings: Playfair Display (serif)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Body Text: Georgia, "Times New Roman", Times, serif
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+Playfair Display is a serif font that adds a touch of elegance.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+I use the same color palette throughout the entire site to create a cohesive and harmonious experience.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+logo
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+The images below are from the initial concept of the website. During the development process, some adjustments have been made to better align with Agile iterations and coincide with the process outlined by the mentor.
+Wirframe
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Model
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
+## Technologies Used
+Programming Languages
+This project uses Python, htlm, Css
 
-## FAQ about the uptime script
+Frameworks, Libraries and Programs
 
-**Why have you added this script?**
+GitPod
+For Integrated Development Environment.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+GitHub
+For storing the repository.
 
-**How will this affect me?**
+heroku Pages
+For deploying the website live.
+Technologies Used
+Below is a complete list of all the technologies used for this project.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+HTML5 / CSS
+Bootstrap
+Python
+JavaScript
+cloudinary
+django allauth library
+django
+gunicorn
+elephantsql
+figma
+lucid chart
+postgresql
+Google Maps with the link from the share link functionality in Google Maps
+Google fonts
+Markdown tables generator
+Images were taken from Pexels
+Deployment
+The project was deployed following the instructions provided by the Code Institute.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+Create new app in heroku
+Set up the setting in Heroku
+Add buildpack (Python, node.js,)
+Set up the deploy in Heroku
+Link Heroku app to the repository Githup
+Chose the deployment method
+Click on view to see the app
+Testing
+I have tested on my local terminal provided by code institute.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+## Validator testing
+PEP 8
+No major errors were found when passing through the PEP 8
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+Error find is
 
-**Can I opt out?**
+E501: line too long
+Bugs
+example of bug :
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+IndentationError: unindent does not match any outer indentation level
+UnboundLocalError: cannot access local variable 'num_ships' where it is not associated with a value
+No bug remainings
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## Credit
+Code institute for the deployment terminal.
 
-**Anything more?**
+Acknowledgments. :
+Special thanks to all Code Institute's team ("Teacher", Lecturers and Tutors) that are making me more knowledgeable and are making this happen.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+Huge thank you to the Slack community, all its members and all the leads and tutors for their help and support.
 
----
-
-Happy coding!
+Thanks to my mentor Precious_Mentor for guiding me through this project.
