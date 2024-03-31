@@ -4,7 +4,36 @@
 {% block title %}Bookings List{% endblock %}
 
 {% block content %}
+<div class="row m-5">
+    <div class="col-12 text-left">
+    <!-- Button to add/make a booking -->
+    <li class="btn btn-success text-left">
+        <a class="text-light" aria-current="page" href="{% url 'add_booking' %}">Add Bookings</a>
+      </li>
+    </div>
+    <div class= "col-12 text-center">
+    <h3 class="m-3">Booking List</h3>
 
-    <h3>Booking List</h3>
-    {{user_bookings}}
+
+
+    {% if user_bookings %}
+
+        {% for user_booking in user_bookings %}
+            <p>
+                {{user_booking.email }} </br>
+                {{user_booking.customer_name }} </br>
+                {{user_booking.phone }} </br>
+                {{user_booking.party_size }} </br>
+                {{user_booking.booking_date }} </br>
+                {{user_booking.booking_size }} </br>
+
+            </p>
+        {% endfor %}
+    {% else %}
+            <p>You don't have any bookings!</p>
+            <p>To make a booking click on Make Booking</p>
+
+    {% endif %}
+</div>
+</div>
 {%endblock%}

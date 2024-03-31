@@ -1,9 +1,9 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 # from django.views.generic import ListView, DetailView
 from .models import Booking, Table
-# from .forms import BookingForm
+from .forms import BookingForm
 
 # Create your views here.
 
@@ -16,10 +16,10 @@ def add_booking(request):
             booking.customer = request.user
             booking.save()
             messages.success(request, f'Reservation successfully added for {booking.customer_name}.')
-            return redirect('booking_detail', pk=booking.pk)
+            return redirect(reverse('booking_list'))
     else:
         form = BookingForm()
-    return render(request, 'bookings/add_booking.html', {'form': form})
+    return render(request, 'booking/add_booking.html', {'form': form})
 
 @login_required
 def edit_booking(request, pk):
@@ -32,7 +32,7 @@ def edit_booking(request, pk):
             return redirect('booking_detail', pk=pk)
     else:
         form = BookingForm(instance=booking)
-    return render(request, 'bookings/edit_booking.html', {'form': form})
+    return render(request, 'booking/edit_booking.html', {'form': form})
 
 @login_required
 def delete_booking(request, pk):
@@ -41,11 +41,12 @@ def delete_booking(request, pk):
         booking.delete()
         messages.success(request, 'Reservation successfully deleted.')
         return redirect('booking_list')
-    return render(request, 'bookings/delete_booking.html', {'booking': booking})
+    return render(request, 'booking/delete_booking.html', {'booking': booking})
 
 def booking_list(request):
     # get the booking of the logged in user ==> A fAIRE
-    user_bookings = 'Bookinnnnnnnnng'
+    user = request.user
+    user_bookings = Booking.objects.filter(customer=user)
     model = Booking
     template = 'booking/booking_list.html'
     context = {
