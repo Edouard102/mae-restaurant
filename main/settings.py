@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['8000-edouard102-maerestauran-i5joeeajh4a.ws-eu110.gitpod.io', 'mae-restaurant-fd1d9cf11a78.herokuapp.com', '.herokuapp.com','localhost']
 
@@ -172,7 +172,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 # Cloudinary Settings
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-CLOUIDNARY_URL = os.environ.get('CLOUDINARY_URL')
+CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
