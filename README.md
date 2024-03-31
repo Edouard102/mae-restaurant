@@ -6,17 +6,20 @@
 ![testing_html2](assets/images/images_readme/testing_2_html.png)
 
 ## Project
-Project Goals
+### Project Goals
 The main objective of this project was to create a website for a restaurant, providing customers with the opportunity to explore the offer. In addition to allowing users to reserve a table as members or first-time visitors, the application allows these users to update or delete their own reservations. Staff members, on the other hand, can create reservations for customers and have the authority to modify or delete them. In summary, the site aims to offer a comprehensive experience for users and staff in discovering the restaurant and managing reservations.
 
-## User Goals
-UX
-Audience Definition
+### User Goals
+
+ # UX
+
+### **Audience Definition**
 
 A restaurant is a limited space where not everyone can be accommodated. This place aims to offer future customers a pleasant and friendly experience for a defined period. Regarding the website, it should reflect the type of restaurant, enabling the filtering of a specific clientele. The determination of the potential customer begins with the visit to the website, where they can get an idea of the place.
 
 
-## User Stories
+### **User Stories**
+
 Here is a concise list of actions that a potential user might consider during their visit to this website:
 
 As a user, I want to:
@@ -37,7 +40,7 @@ Be able to log out and log back into the site without encountering any specific 
 Input validation and error checking.
 validation
 
-Features to Implement in the Future Versions
+# Features to Implement in the Future Versions
 
 While the website fulfills the basic functions of a restaurant site, there are additional features that could be added:
 Visual Gallery: Integrate an attractive photo gallery showcasing the restaurant's ambiance, popular dishes, and special moments to give visitors a better idea of the experience they can expect.
@@ -64,7 +67,6 @@ The primary background (gray-blue) will provide an interesting visual contrast.
 
 ## Fonts:
 
-
 Headings: Playfair Display (serif)
 
 Body Text: Georgia, "Times New Roman", Times, serif
@@ -83,43 +85,45 @@ Wirframe
 
 
 
-## Technologies Used
-Programming Languages
+# Technologies Used
+### Programming Languages
 This project uses Python, htlm, Css
 
-Frameworks, Libraries and Programs
+### Frameworks, Libraries and Programs
 
-GitPod
-For Integrated Development Environment.
+* [codeanywhere](https://app.codeanywhere.com/)  
+  For Integrated Development Environment.
 
-GitHub
-For storing the repository.
+* [GitPod](https://www.gitpod.io/)  
+  For Integrated Development Environment.
 
-heroku Pages
-For deploying the website live.
-Technologies Used
+* [GitHub](https://github.com/)  
+  For storing the repository.
+
+* [heroku Pages](https://dashboard.heroku.com/apps)  
+  For deploying the website live.
+
+# Technologies Used
+
 Below is a complete list of all the technologies used for this project.
 
-HTML5 / CSS
-Bootstrap
-Python
-JavaScript
-cloudinary
-django allauth library
-django
-gunicorn
-elephantsql
-figma
-lucid chart
-postgresql
-Google Maps with the link from the share link functionality in Google Maps
-Google fonts
-Markdown tables generator
-Images were taken from Pexels
-Deployment
+* HTML5 / CSS
+* Bootstrap
+* Python
+* JavaScript
+* cloudjango allauth library
+* django
+* gunicorn
+* elephantsql
+* postgresql
+* Google Maps with the link from the share link functionality in Google Maps
+* Google fonts
+* Markdown tables generator
+
+# Deployment
 The project was deployed following the instructions provided by the Code Institute.
 
-Create new app in heroku
+- Create new app in heroku
 Set up the setting in Heroku
 Add buildpack (Python, node.js,)
 Set up the deploy in Heroku
@@ -130,24 +134,24 @@ Testing
 I have tested on my local terminal provided by code institute.
 
 
-## Validator testing
+# Validator testing
+
 PEP 8
 No major errors were found when passing through the PEP 8
 
 Error find is
 
 E501: line too long
-Bugs
+
+# Bugs
 example of bug :
 
-IndentationError: unindent does not match any outer indentation level
-UnboundLocalError: cannot access local variable 'num_ships' where it is not associated with a value
-No bug remainings
 
-## Credit
+# Credit
 Code institute for the deployment terminal.
 
-Acknowledgments. :
+### Acknowledgments. :
+
 Special thanks to all Code Institute's team ("Teacher", Lecturers and Tutors) that are making me more knowledgeable and are making this happen.
 
 Huge thank you to the Slack community, all its members and all the leads and tutors for their help and support.
