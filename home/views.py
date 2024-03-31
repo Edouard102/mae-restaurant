@@ -1,16 +1,27 @@
-from django.views.generic import TemplateView
+from django.shortcuts import render
+
 
 # Create your views here.
 
-class Index(TemplateView):
-    template_name = 'home/index.html'
+def  index(request):
+    ''' A view to return the index page '''
+    
+    template = 'home/index.html'
+   
+    return render(request, template)
 
-# class Menu(TemplateView):
-#     template_name = 'menu/menu.html'
+def  menu(request):
+    ''' A view to return the menu page '''
+    
+    template = 'home/menu.html'
+   
+    return render(request, template)
 
-# class Contact(TemplateView):
-#     template_name = 'contact/contact.html'
+def  contact(request):
+    ''' A view to return the contact page '''
+    
+    template = 'home/contact.html'
+   
+    return render(request, template)
 
-# class Newsletter(TemplateView):
-#     template_name = 'homenewsletter/newsletter.html'
 

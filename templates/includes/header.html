@@ -24,10 +24,10 @@
                 <a class="nav-link {% if url_name == 'home' %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Menus</a>
+                <a class="nav-link {% if url_name == 'menu' %}active{% endif %}" aria-current="page" href="{% url 'menu' %}">Menu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link {% if url_name == 'contact' %}active{% endif %}" aria-current="page" href="{% url 'contact' %}">Contact</a>
             
          <!-- authenticated -->
 
