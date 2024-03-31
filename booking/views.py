@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.views.generic import ListView, DetailView
+# from django.views.generic import ListView, DetailView
 from .models import Booking, Table
-from .forms import BookingForm
+# from .forms import BookingForm
 
 # Create your views here.
 
@@ -43,16 +43,23 @@ def delete_booking(request, pk):
         return redirect('booking_list')
     return render(request, 'bookings/delete_booking.html', {'booking': booking})
 
-class BookingListView(ListView):
+def booking_list(request):
+    # get the booking of the logged in user ==> A fAIRE
+    user_bookings = 'Bookinnnnnnnnng'
     model = Booking
-    template_name = 'bookings/booking_list.html'
-    context_object_name = 'bookings'
+    template = 'booking/booking_list.html'
+    context = {
+        'user_bookings': user_bookings,
+    }
 
-    def get_queryset(self):
-        if self.request.user.is_staff:
-            return Booking.objects.all()
-        else:
-            return Booking.objects.filter(customer=self.request.user)
+    return render(request, template, context)
+    # context_object_name = 'bookings'
+
+    # def get_queryset(self):
+    #     if self.request.user.is_staff:
+    #         return Booking.objects.all()
+    #     else:
+    #         return Booking.objects.filter(customer=self.request.user)
 
 
 def is_restaurant_full(date, time):
@@ -68,9 +75,9 @@ def is_restaurant_full(date, time):
     return total_reserved_seats >= total_capacity
 
 
-date = datetime.today().date()
-time = 18  
-if is_restaurant_full(date, time):
-    print("The restaurant is full.")
-else:
-    print("There are still available seats.")
+# date = datetime.today().date()
+# time = 18  
+# if is_restaurant_full(date, time):
+#     print("The restaurant is full.")
+# else:
+#     print("There are still available seats.")
