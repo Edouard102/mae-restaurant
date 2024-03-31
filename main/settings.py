@@ -27,10 +27,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-edouard102-maerestauran-i5joeeajh4a.ws-eu110.gitpod.io', 'mae-restaurant-fd1d9cf11a78.herokuapp.com', '.herokuapp.com','localhost']
 
+# added from https://stackoverflow.com/questions/77208322/forbidden-origin-checking-failed-https-api-example-com-does-not-match-any-t 
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # Application definition
 

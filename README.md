@@ -146,6 +146,19 @@ E501: line too long
 # Bugs
 example of bug :
 
+error login logout 
+since implanted allauth i can't login or log out.
+
+Forbidden (Origin checking failed - https://8000-edouard102-maerestauran-i5joeeajh4a.ws-eu110.gitpod.io does not match any trusted origins.): /admin/login/ [31/Mar/2024 11:10:18] "POST /admin/login/?next=/admin/ HTTP/1.1" 403 2615
+
+solution
+solution fund 
+in https://stackoverflow.com/questions/77208322/forbidden-origin-checking-failed-https-api-example-com-does-not-match-any-t
+
+add in settings the code
+ added from https://stackoverflow.com/questions/77208322/forbidden-origin-checking-failed-https-api-example-com-does-not-match-any-t 
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
 
 # Credit
 Code institute for the deployment terminal.

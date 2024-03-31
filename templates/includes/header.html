@@ -39,6 +39,11 @@
 <li class="nav-item">
 	<a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Reservation</a>
 </li>
+<li class="nav-item">
+  <a class="nav-link {% if url_name == 'account_signup' %}active text-info{% endif %}"
+    href="/accounts/signup/">Register</a>
+</li>
+
 {% endif %}
             </ul>
           </div>
