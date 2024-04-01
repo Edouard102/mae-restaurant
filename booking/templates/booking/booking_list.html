@@ -31,10 +31,12 @@
 
                   <!-- button to edit booking   -->
 
-                <li class="btn btn-success">
-                    <a class="text-light" aria-current="page" href="{% url 'edit_booking' pk=user_booking.id %}">Edit Booking</a>
+                <li class="btn btn-primary m-2">
+                    <a class="text-light" aria-current="page" href="{% url 'edit_booking' pk=user_booking.id %}">Edit</a>
                 </li>
-
+                <li class="btn btn-danger m-2">
+                    <a class="text-light" aria-current="page" href="{% url 'cancel_booking' pk=user_booking.id %}">Cancel</a>
+                </li>
 
             {% endfor %}
         {% else %}

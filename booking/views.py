@@ -28,7 +28,7 @@ def edit_booking(request, pk):
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Reservation successfully deleted.')
+            messages.success(request, 'Reservation successfully updated..')
             return redirect('booking_list')
     else:
         form = BookingForm(instance=booking)
@@ -41,7 +41,7 @@ def delete_booking(request, pk):
         booking.delete()
         messages.success(request, 'Reservation successfully deleted.')
         return redirect('booking_list')
-    return render(request, 'booking/delete_booking.html', {'booking': booking})
+    return render(request, 'booking/cancel_booking.html', {'booking': booking})
 
 def booking_list(request):
     # get the booking of the logged in user ==> A fAIRE
