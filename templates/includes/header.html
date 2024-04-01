@@ -11,10 +11,9 @@
             
         <!-- Logo -->
 
-          <a class="navbar-brand" href="#"><img src="{% static 'images/maelogo.png' %}" alt="mae Logo" class="logo"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <a><img src="{% static 'images/maelogo.png' %}" alt="mae Logo" class="logo"></a>
+         
+        
 
         <!-- Navigation items -->
 
@@ -27,7 +26,7 @@
                 <a class="nav-link {% if url_name == 'menu' %}active{% endif %}" aria-current="page" href="{% url 'menu' %}">Menu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {% if url_name == 'contact' %}active{% endif %}" aria-current="page" href="{% url 'contact' %}">Contact</a>
+                <a class="nav-link {% if url_name == 'contact' %}active{% endif %}" aria-current="page" href="{% url 'contact' %}">About</a>
             
          <!-- authenticated -->
 

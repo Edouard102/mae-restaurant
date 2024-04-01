@@ -1,9 +1,10 @@
 
 # **Mae restaurent**
 
-![responsicemockup]https://ui.dev/amiresponsive?url=https://edouard102.github.io/my_first_project/
-![responsicemockup](assets/images/images_readme/ami_responsive_home.png)
-![testing_html2](assets/images/images_readme/testing_2_html.png)
+![responsicemockup]https://ui.dev/amiresponsive?url=https://mae-restaurant-fd1d9cf11a78.herokuapp.com/
+
+![herokuapp]https://mae-restaurant-fd1d9cf11a78.herokuapp.com/
+
 
 ## Project
 ### Project Goals
@@ -55,17 +56,18 @@ Reservation Customization Options: Offer customers the ability to specify specia
 ## Planning
 Project planning was done with Agile methodologies.
 
+![Agile_metho](static/images/images_rm/agile.png)
 
 ## Website Design
 
-Color Palette:
+### Color Palette:
 
-Primary (Background): #abb8c3 (a shade of gray-blue)
---white-Smoke: #F9F9F9; 
-Text: green #497569 
+* Primary (Background): #abb8c3 (a shade of gray-blue)
+* --white-Smoke: #F9F9F9; 
+* Text: green #497569 
 The primary background (gray-blue) will provide an interesting visual contrast.
 
-## Fonts:
+### Fonts:
 
 Headings: Playfair Display (serif)
 
@@ -75,14 +77,31 @@ Playfair Display is a serif font that adds a touch of elegance.
 
 I use the same color palette throughout the entire site to create a cohesive and harmonious experience.
 
-logo
+### logo
 
 
 The images below are from the initial concept of the website. During the development process, some adjustments have been made to better align with Agile iterations and coincide with the process outlined by the mentor.
-Wirframe
+
+# Wirframe
+
+- Base template wide
+
+![ireframes](static/images/images_rm/wireframes.png)
+
+- Base template phone
+
+![W-phone](static/images/images_rm/w_phone.png)
+
+- Navigation bar
+
+![mae_navbar](static/images/images_rm/mae_navbar.png)
+
+- Footer
+
+![mae_footer](static/images/images_rm/mae_footer.png)
+
 
 ## Model
-
 
 
 # Technologies Used
@@ -124,41 +143,55 @@ Below is a complete list of all the technologies used for this project.
 The project was deployed following the instructions provided by the Code Institute.
 
 - Create new app in heroku
-Set up the setting in Heroku
-Add buildpack (Python, node.js,)
-Set up the deploy in Heroku
-Link Heroku app to the repository Githup
-Chose the deployment method
-Click on view to see the app
-Testing
-I have tested on my local terminal provided by code institute.
+- Setup the setting in Heroku
+
+   Config Vars
+    * CLOUDINARY_URL
+    * DATABASE_URL
+    * DEVELOPMENT
+    * DISABLE_COLLECTSTATIC
+    * SECRET_KEY
+
+- Setup the deploy in Heroku
+    * Link Heroku app to the repository Githup
+    * Chose the deployment method
+
+- Click on view to see the app
 
 
-# Validator testing
+# Testing
 
-PEP 8
+![mae_performence](static/images/images_rm/mae_performence.png)
+
+## Validator testing
+
 No major errors were found when passing through the PEP 8
 
-Error find is
+### Manual Testing
 
-E501: line too long
+The manual testing for creating, deleting, or updating a reservation, as well as for adding a new user, was successful.
 
-# Bugs
+## Bugs
 example of bug :
 
-error login logout 
+* error login logout 
 since implanted allauth i can't login or log out.
 
 Forbidden (Origin checking failed - https://8000-edouard102-maerestauran-i5joeeajh4a.ws-eu110.gitpod.io does not match any trusted origins.): /admin/login/ [31/Mar/2024 11:10:18] "POST /admin/login/?next=/admin/ HTTP/1.1" 403 2615
 
-solution
 solution fund 
 in https://stackoverflow.com/questions/77208322/forbidden-origin-checking-failed-https-api-example-com-does-not-match-any-t
 
 add in settings the code
- added from https://stackoverflow.com/questions/77208322/forbidden-origin-checking-failed-https-api-example-com-does-not-match-any-t 
+added from https://stackoverflow.com/questions/77208322/forbidden-origin-checking-failed-https-api-example-com-does-not-match-any-t 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
+
+* error loading css with heroku
+Refused to apply style from 'https://mae-restaurant-fd1d9cf11a78.herokuapp.com/static/css/base.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
+
+solution fund
+correctly configure whitnoise settings
 
 # Credit
 Code institute for the deployment terminal.
@@ -167,6 +200,6 @@ Code institute for the deployment terminal.
 
 Special thanks to all Code Institute's team ("Teacher", Lecturers and Tutors) that are making me more knowledgeable and are making this happen.
 
-Huge thank you to the Slack community, all its members and all the leads and tutors for their help and support.
+Huge thank you to the [Slack](code-institute-room.slack.com) community, all its members and all the leads and tutors for their help and support.
 
 Thanks to my mentor Precious_Mentor for guiding me through this project.
