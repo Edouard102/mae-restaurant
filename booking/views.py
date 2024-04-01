@@ -44,7 +44,6 @@ def delete_booking(request, pk):
     return render(request, 'booking/cancel_booking.html', {'booking': booking})
 
 def booking_list(request):
-    # get the booking of the logged in user ==> A fAIRE
     user = request.user
     user_bookings = Booking.objects.filter(customer=user)
     model = Booking
@@ -53,14 +52,6 @@ def booking_list(request):
         'user_bookings': user_bookings,
     }
     return render(request, template, context)
-    # context_object_name = 'bookings'
-
-    # def get_queryset(self):
-    #     if self.request.user.is_staff:
-    #         return Booking.objects.all()
-    #     else:
-    #         return Booking.objects.filter(customer=self.request.user)
-
 
 def is_restaurant_full(date, time):
    
@@ -74,10 +65,9 @@ def is_restaurant_full(date, time):
     
     return total_reserved_seats >= total_capacity
 
-
-# date = datetime.today().date()
-# time = 18  
-# if is_restaurant_full(date, time):
-#     print("The restaurant is full.")
-# else:
-#     print("There are still available seats.")
+    date = datetime.today().date()
+    time = 18  
+    if is_restaurant_full(date, time):
+        print("The restaurant is full.")
+    else:
+        print("There are still available seats.")
