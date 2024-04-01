@@ -5,35 +5,42 @@
 
 {% block content %}
 <div class="row m-5">
-    <div class="col-12 text-left">
+    <div class="col-12 text-left m-2">
+
     <!-- Button to add/make a booking -->
     <li class="btn btn-success text-left">
         <a class="text-light" aria-current="page" href="{% url 'add_booking' %}">Add Bookings</a>
-      </li>
-    </div>
+    </li>
+    </div>  
+
     <div class= "col-12 text-center">
-    <h3 class="m-3">Booking List</h3>
+        <h3 class="m-3">Reservation List</h3>
+
+        {% if user_bookings %}
+            {% for user_booking in user_bookings %}
+                <p>
+                    Email : {{ user_booking.email }} <br>
+                    Customer Name : {{ user_booking.customer_name }} <br>
+                    Phone : {{ user_booking.phone }} <br>
+                    Number of guest : {{ user_booking.party_size }} <br>
+                    Date of reservation : {{ user_booking.booking_date }} <br>
+                    Time : {{ user_booking.booking_time }} <br>
+                    Notes : {{ user_booking.notes }} <br>
+                    Allergies : {{ user_booking.allergies }} <br>
+                </p>
+
+                  <!-- button to edit booking   -->
+
+                <li class="btn btn-success">
+                    <a class="text-light" aria-current="page" href="{% url 'edit_booking' pk=user_booking.id %}">Edit Booking</a>
+                </li>
 
 
-
-    {% if user_bookings %}
-
-        {% for user_booking in user_bookings %}
-            <p>
-                {{user_booking.email }} </br>
-                {{user_booking.customer_name }} </br>
-                {{user_booking.phone }} </br>
-                {{user_booking.party_size }} </br>
-                {{user_booking.booking_date }} </br>
-                {{user_booking.booking_size }} </br>
-
-            </p>
-        {% endfor %}
-    {% else %}
+            {% endfor %}
+        {% else %}
             <p>You don't have any bookings!</p>
-            <p>To make a booking click on Make Booking</p>
-
-    {% endif %}
+            <p>To make a booking, click on "Add Booking"</p>
+        {% endif %}
+    </div>
 </div>
-</div>
-{%endblock%}
+{% endblock %}

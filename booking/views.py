@@ -29,7 +29,7 @@ def edit_booking(request, pk):
         if form.is_valid():
             form.save()
             messages.success(request, 'Reservation successfully deleted.')
-            return redirect('booking_detail', pk=pk)
+            return redirect('booking_list')
     else:
         form = BookingForm(instance=booking)
     return render(request, 'booking/edit_booking.html', {'form': form})
@@ -52,7 +52,6 @@ def booking_list(request):
     context = {
         'user_bookings': user_bookings,
     }
-
     return render(request, template, context)
     # context_object_name = 'bookings'
 
