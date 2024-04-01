@@ -5,4 +5,3 @@ from .models import Booking, Table
 
 # Create your tests here.
 
-
