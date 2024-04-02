@@ -69,21 +69,17 @@ The primary background (gray-blue) will provide an interesting visual contrast.
 
 ### Fonts:
 
-Headings: Playfair Display (serif)
+Headings: Noto Serif Georgian, sans-serif
 
-Body Text: Georgia, "Times New Roman", Times, serif
+Body Text: Noto Serif Georgian, sans-serif
 
-Playfair Display is a serif font that adds a touch of elegance.
+Noto Serif Georgian a serif font that adds a touch of elegance.
 
 I use the same color palette throughout the entire site to create a cohesive and harmonious experience.
 
-### logo
-
-
-The images below are from the initial concept of the website. During the development process, some adjustments have been made to better align with Agile iterations and coincide with the process outlined by the mentor.
-
 # Wirframe
 
+The following designs are from the initial concept of the website. During the development process, some changes have been made to better fit and improve the user experience.
 - Base template wide
 
 ![ireframes](static/images/images_rm/wireframes.png)
@@ -92,16 +88,17 @@ The images below are from the initial concept of the website. During the develop
 
 ![W-phone](static/images/images_rm/w_phone.png)
 
-- Navigation bar
+- Header
+At the top right, you'll find the restaurant's logo along with links to the three main pages. This will give you easy access to all pages. The navigation bar includes links to the Home, Menu, About and Login - Reservation. It remains consistent across all pages, allowing users to navigate easily between them.
 
 ![mae_navbar](static/images/images_rm/mae_navbar.png)
 
 - Footer
 
+Here are the various links to social media platforms such as Facebook and Instagram for Mae restaurant, along with its contact information. We will include them on all pages for a consistent experience across the site.
+
 ![mae_footer](static/images/images_rm/mae_footer.png)
 
-
-## Model
 
 
 # Technologies Used
@@ -124,7 +121,7 @@ This project uses Python, htlm, Css
 
 # Technologies Used
 
-Below is a complete list of all the technologies used for this project.
+Below is a list of the main technologies used for this project.
 
 * HTML5 / CSS
 * Bootstrap
@@ -135,11 +132,11 @@ Below is a complete list of all the technologies used for this project.
 * gunicorn
 * elephantsql
 * postgresql
-* Google Maps with the link from the share link functionality in Google Maps
 * Google fonts
-* Markdown tables generator
+
 
 # Deployment
+
 The project was deployed following the instructions provided by the Code Institute.
 
 - Create new app in heroku
@@ -165,7 +162,7 @@ The project was deployed following the instructions provided by the Code Institu
 
 ## Validator testing
 
-No major errors were found when passing through the PEP 8
+No major errors were found when passing through the PEP 8 and the W3 HTML Validator
 
 ### Manual Testing
 
