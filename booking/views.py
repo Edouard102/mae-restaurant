@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-# from django.views.generic import ListView, DetailView
 from .models import Booking, Table
 from .forms import BookingForm
+import datetime
 
 # Create your views here.
 
@@ -11,6 +11,18 @@ from .forms import BookingForm
 def add_booking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
+        if form.is_valid():
+            booking_date = form.cleaned_data['booking_date']
+            party_size = form.cleaned_data['party_size']
+
+            if booking_date < datetime.date.today():
+                messages.error(request, 'The booking date cannot be in the past.')
+                return render(request, 'booking/add_booking.html', {'form': form})
+
+            if party_size <= 0:
+                messages.error(request, 'The number of customers must be greater than 0.')
+                return render(request, 'booking/add_booking.html', {'form': form}) 
+
         if form.is_valid():
             booking = form.save(commit=False)
             booking.customer = request.user
