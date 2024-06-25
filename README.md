@@ -303,12 +303,19 @@ by this:
 STATICFILES_STORAGE =  'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 But creates an issue with loading the CSS when debug is false.
+ 
+        - Error loading css with heroku 
+
+Refused to apply style from 'https://mae-restaurant-fd1d9cf11a78.herokuapp.com/static/css/base.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
+
+solution fund 
+
+in https://stackoverflow.com/questions/59972571/mime-type-issue-loading-css-with-django-app 
+
+need to run $ python manage.py collectstatic before pushing to Heroku.
 
 ## bugs unfixed
 
-* Error loading css with heroku 
-
-Refused to apply style from 'https://mae-restaurant-fd1d9cf11a78.herokuapp.com/static/css/base.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
 
 * Error on the validator.w3
 
