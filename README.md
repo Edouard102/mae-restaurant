@@ -77,7 +77,7 @@ Noto Serif Georgian a serif font that adds a touch of elegance.
 
 I use the same color palette throughout the entire site to create a cohesive and harmonious experience.
 
-# Wirframe
+# Wireframes
 
 The following designs are from the initial concept of the website. During the development process, some changes have been made to better fit and improve the user experience.
 - Base template wide
@@ -158,6 +158,11 @@ The project was deployed following the instructions provided by the Code Institu
 
 # Testing
 
+## Lighthouse
+
+Lighthouse is a tool provided by Google Chrome DevTools and allows to identify the site performance, accessibility and user experience on Mobile and Desktop.
+All the pages from the website have been tested with Lighthouse.
+
 ![mae_performence](static/images/images_rm/mae_performence.png)
 
 ## Validator testing
@@ -166,17 +171,108 @@ No major errors were found when passing through the PEP 8 and the W3 HTML Valida
 
 ### Manual Testing
 
-The manual testing for creating, deleting, or updating a reservation, as well as for adding a new user, was successful.
+| Test Description   | Steps to Reproduce | Expected Result  | Note   |
+|--------------------|--------------------|------------------|--------|
+| Ability to browse the web page on different browsers | Try the web page on Safari, Chrome, Firefox, Brave, Edge | The website loads successfully on each browser    | Ensure compatibility across major browsers |
+
+<img src="static/images/images_rm/mae_home.png" alt="menu" style="width: 30%;">
+
+| Test Description   | Steps to Reproduce | Expected Result  | Note   |
+|--------------------|--------------------|------------------|--------|
+| Ability to browse the website pages       | Navigate from main page using navigation bar                                        | User is redirected to selected page                                              | Verify navigation functionality throughout the site                      |
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="static/images/images_rm/mae_menu.png" alt="menu" style="width: 30%;">
+    <img src="static/images/images_rm/mae_about.png" alt="about" style="width: 30%;">
+    <img src="static/images/images_rm/mae_login.png" alt="login" style="width: 30%;">
+</div>
+
+| Test Description   | Steps to Reproduce | Expected Result  | Note   |
+|--------------------|--------------------|------------------|--------|
+| Ability to register to the website        | Click sign-up link, fill form, submit                                                | User data is registered. Appearance in the navigation bar of a booking and logout link.                         | Appropriate warning messages for errors or fields to be filled in.             |
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="static/images/images_rm/mae_signup.png" alt="signup" style="width: 30%;">
+    <img src="static/images/images_rm/mae_logout.png" alt="logout" style="width: 30%;">
+    <img src="static/images/images_rm/mae_please.png" alt="warnings" style="width: 30%;">
+</div>
+
+| Test Description   | Steps to Reproduce | Expected Result  | Note   |
+|--------------------|--------------------|------------------|--------|
+| Ability to Log in                         | Click log-in link, enter credentials, log in                                         | Successful login, appropriate warnings for incorrect credentials                | Test various scenarios (valid login, invalid password, etc.)              |
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="static/images/images_rm/mae_login.png" alt="login" style="width: 30%;">
+    <img src="static/images/images_rm/mae_singinw.png" alt="sign in warning" style="width: 30%;">
+    <img src="static/images/images_rm/mae_bookings.png" alt="bookings" style="width: 30%;">
+</div>
+
+| Test Description   | Steps to Reproduce | Expected Result  | Note   |
+|--------------------|--------------------|------------------|--------|
+| Ability to Log out                        | Click logout link                                                                    | User is logged out. UI reflects logout state                                     | Ensure session management and UI updates correctly                        |
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="static/images/images_rm/mae_bookings.png" alt="bookings" style="width: 30%;">
+    <img src="static/images/images_rm/mae_signout.png" alt="sigout" style="width: 30%;">
+    <img src="static/images/images_rm/mae_home.png" alt="home" style="width: 30%;">
+</div>
+
+| Test Description   | Steps to Reproduce | Expected Result  | Note   |
+|--------------------|--------------------|------------------|--------|
+| Ability to book a table                   | Click add booking link, fill out form, submit                                        | Booking is added to reservation list. validation for missing information         | Test different scenarios (valid booking, forgetting to fill in various fields like name, phone number, time, etc.).   |
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="static/images/images_rm/mae_add.png" alt="add booking" style="width: 30%;">
+    <img src="static/images/images_rm/mae_resaform.png" alt="sigout" style="width: 30%;">
+    <img src="static/images/images_rm/mae_resa.png" alt="reservation" style="width: 30%;">
+</div>
+
+| Test Description   | Steps to Reproduce | Expected Result  | Note   |
+|--------------------|--------------------|------------------|--------|
+| Ability to view the reservations          | Log in, navigate to bookings page                                                    | Reservations are visible. Options to edit and delete                            | Check user access rights and reservation display                          |
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="static/images/images_rm/mae_resalist.png" alt="resa list" style="width: 30%;">
+</div>
+
+| Test Description   | Steps to Reproduce | Expected Result  | Note   |
+|--------------------|--------------------|------------------|--------|
+| Ability to edit the reservations          | Log in, navigate to bookings page, select reservation, press edit                   | Details of reservation are editable                                              | Verify editing functionality and the ability to change information.                         |
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="static/images/images_rm/mae_resalist.png" alt="resa list" style="width: 30%;">
+    <img src="static/images/images_rm/mae_edit.png" alt="resa list" style="width: 30%;">
+    <img src="static/images/images_rm/mae_resalist2.png" alt="resa list" style="width: 30%;">
+</div>
+
+| Test Description   | Steps to Reproduce | Expected Result  | Note   |
+|--------------------|--------------------|------------------|--------|
+| Ability to delete the reservation         | Log in, navigate to bookings page, select reservation, click delete                 | Confirmation prompt for deleting reservation                                      | Test deletion process and confirmation message                             |
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="static/images/images_rm/mae_resalist.png" alt="resa list" style="width: 30%;">
+    <img src="static/images/images_rm/mae_cancel.png" alt="resa list" style="width: 30%;">
+</div>
+
+
+| Test Description   | Steps to Reproduce | Expected Result  | Note   |
+|--------------------|--------------------|------------------|--------|
+| Ability to access the website as an admin | Log in with admin credentials                                                       | Admin access granted based on superuser permissions                              | Test admin login functionality and access rights                           |
+| Ability to see all reservations as an admin | Log in with admin credentials, navigate to bookings page                             | All reservations are visible to admin                                            | Check admin view permissions and reservation display                       |
+| Ability to edit reservations as an admin  | Log in with admin credentials, navigate to bookings page, select reservation, press edit | Details of reservation are editable                                              | Ensure admin editing rights and data persistence                           |
+| Ability to delete reservations as an admin | Log in with admin credentials, navigate to bookings page, select reservation, click delete | Confirmation prompt for deleting reservation                                      | Test admin deletion process and confirmation message                       |
 
 ## Bugs
 example of bug :
 
 * error login logout 
+
 since implanted allauth i can't login or log out.
 
 Forbidden (Origin checking failed - https://8000-edouard102-maerestauran-i5joeeajh4a.ws-eu110.gitpod.io does not match any trusted origins.): /admin/login/ [31/Mar/2024 11:10:18] "POST /admin/login/?next=/admin/ HTTP/1.1" 403 2615
 
-solution fund 
+solution fund
+
 in https://stackoverflow.com/questions/77208322/forbidden-origin-checking-failed-https-api-example-com-does-not-match-any-t
 
 add in settings the code
@@ -185,10 +281,42 @@ SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 
 * error loading css with heroku
+
 Refused to apply style from 'https://mae-restaurant-fd1d9cf11a78.herokuapp.com/static/css/base.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
 
 solution fund
+
 correctly configure whitnoise settings
+
+* Error: Server Error (500) when deployed on Heroku.
+
+solution fund 
+
+in https://stackoverflow.com/questions/44221653/deploying-django-to-heroku-server-error-500
+
+change the files
+
+STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+by this:
+
+STATICFILES_STORAGE =  'django.contrib.staticfiles.storage.StaticFilesStorage'
+
+But creates an issue with loading the CSS when debug is false.
+
+## bugs unfixed
+
+* Error loading css with heroku 
+
+Refused to apply style from 'https://mae-restaurant-fd1d9cf11a78.herokuapp.com/static/css/base.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
+
+* Error on the validator.w3
+
+On the page https://mae-restaurant-fd1d9cf11a78.herokuapp.com/accounts/signup/, errors are still present
+
+The error comes from the line 99,
+
+The code was provided by allauth.
 
 # Credit
 Code institute for the deployment terminal.
@@ -199,4 +327,4 @@ Special thanks to all Code Institute's team ("Teacher", Lecturers and Tutors) th
 
 Huge thank you to the [Slack](code-institute-room.slack.com) community, all its members and all the leads and tutors for their help and support.
 
-Thanks to my mentor Precious_Mentor for guiding me through this project.
+Thanks to my mentor Rohit Sharma for guiding me through this project.
