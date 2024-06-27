@@ -1,5 +1,5 @@
 
-# **Mae restaurent**
+# **Mae restaurant**
 
 ![responsicemockup]https://ui.dev/amiresponsive?url=https://mae-restaurant-fd1d9cf11a78.herokuapp.com/
 
@@ -7,12 +7,16 @@
 
 
 ## Project
+
 ### Project Goals
 The main objective of this project was to create a website for a restaurant, providing customers with the opportunity to explore the offer. In addition to allowing users to reserve a table as members or first-time visitors, the application allows these users to update or delete their own reservations. Staff members, on the other hand, can create reservations for customers and have the authority to modify or delete them. In summary, the site aims to offer a comprehensive experience for users and staff in discovering the restaurant and managing reservations.
 
 ### User Goals
+* The application allows users to sign up with an email address and a password, and then make a restaurant reservation. They will subsequently be able to edit or cancel their own reservations. 
 
- # UX
+* Staff members will have the ability to create reservations for customers and will have the authority to edit or delete any customer's reservations.
+
+# UX
 
 ### **Audience Definition**
 
@@ -29,6 +33,7 @@ Land on a homepage presenting the core content of the site and providing intuiti
 Access a menu section to get an overview of the available options.
 Learn more about the restaurant and its features.
 Make a reservation without having to subscribe to a newsletter or other services.
+
 Second Visit:
 
 As a subscribed user, I want to:
@@ -37,9 +42,6 @@ Be able to register on the site to create an account allowing access to the hist
 Make new reservations as a registered user.
 Have the option to modify and/or delete the reservations I've made.
 Be able to log out and log back into the site without encountering any specific difficulties.
-
-Input validation and error checking.
-validation
 
 # Features to Implement in the Future Versions
 
@@ -80,6 +82,17 @@ I use the same color palette throughout the entire site to create a cohesive and
 # Wireframes
 
 The following designs are from the initial concept of the website. During the development process, some changes have been made to better fit and improve the user experience.
+
+- site map
+
+![ireframes](static/images/images_rm/mae_map.png)
+
+- Entity-Relationship Diagram (ERD)
+
+This diagram illustrates the primary relationships among the following entities, illustrating how users are connected to bookings and tables. It serves to outline the foundational structure of a restaurant reservation management system.
+
+![ireframes](static/images/images_rm/mae_erd.png)
+
 - Base template wide
 
 ![ireframes](static/images/images_rm/wireframes.png)
@@ -312,7 +325,7 @@ solution fund
 
 in https://stackoverflow.com/questions/59972571/mime-type-issue-loading-css-with-django-app 
 
-need to run $ python manage.py collectstatic before pushing to Heroku.
+need to run $ python3 manage.py collectstatic before pushing to Heroku.
 
 ## bugs unfixed
 
