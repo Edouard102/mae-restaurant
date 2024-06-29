@@ -36,9 +36,25 @@ def add_booking(request):
 @login_required
 def edit_booking(request, pk):
     booking = get_object_or_404(Booking, pk=pk)
+    
+    if booking.booking_date < datetime.date.today():
+        messages.error(request, 'Cannot edit a booking that has already passed.')
+        return redirect('booking_list')
+
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
+            booking_date = form.cleaned_data['booking_date']
+            party_size = form.cleaned_data['party_size']
+
+            if booking_date < datetime.date.today():
+                messages.error(request, 'The booking date cannot be in the past.')
+                return render(request, 'booking/add_booking.html', {'form': form})
+
+            if party_size <= 0:
+                messages.error(request, 'The number of customers must be greater than 0.')
+                return render(request, 'booking/add_booking.html', {'form': form}) 
+
             form.save()
             messages.success(request, 'Reservation successfully updated..')
             return redirect('booking_list')

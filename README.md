@@ -184,6 +184,8 @@ No major errors were found when passing through the PEP 8 and the W3 HTML Valida
 
 ### Manual Testing
 
+[TESTING](TESTING.md)
+
 | Test Description   | Steps to Reproduce | Expected Result  | Note   |
 |--------------------|--------------------|------------------|--------|
 | Ability to browse the web page on different browsers | Try the web page on Safari, Chrome, Firefox, Brave, Edge | The website loads successfully on each browser    | Ensure compatibility across major browsers |
