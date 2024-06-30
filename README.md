@@ -184,7 +184,7 @@ No major errors were found when passing through the PEP 8 and the W3 HTML Valida
 
 ### Manual Testing
 
-[TESTING](TESTING.md)
+Link to full manual [TESTING.md](TESTING.md)
 
 | Test Description   | Steps to Reproduce | Expected Result  | Note   |
 |--------------------|--------------------|------------------|--------|
