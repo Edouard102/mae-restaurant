@@ -6,6 +6,19 @@
 {% block content %}
 
     <h3>Make a Reservation</h3>
+    
+    <!-- Display messages -->
+    {% if messages %}
+    <div class="row mb-3">
+        <div class="col-12">
+            {% for message in messages %}
+                <div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-info{% endif %}" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
 
     <div class="row justify-content-center">
         <!-- make a booking form -->

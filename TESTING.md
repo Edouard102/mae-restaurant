@@ -103,9 +103,9 @@
 | Phone |Input | User can only enter 15 numbers|PASS|
 | Phone missing | Display |  Message Please field in this field | Pass |
 | Booking date | Display |The user is asked to enter the date for their booking|PASS|
-| Booking date | Input | User can only enter date format dd/mm/yyyy|PASS|
-| Booking date missing | Input|Message Please field in this field|PASS|
-| Booking date made in the past|Input | Message The booking date cannot be in the past.|FAIL |
+| Booking date | Input | User can only enter date format dd/mm/yyyy| PASS|
+| Booking date missing | Input|Message Please field in this field| PASS|
+| Booking date made in the past|Input | Message The booking date cannot be in the past.| PASS  |
 | Booking time |Display | The users have the choice between 3 different hours|PASS|
 | Booking time |Input|User can only choose any of the times provided|PASS|
 | Booking time missing |Input|Message Please field in this field|PASS|
@@ -137,7 +137,7 @@
 | Party size| Display| The user should see the party size |PASS|
 | Party size| Input| The user can change the party size |PASS|
 | Party size missing  |Display |  Message Please field in this field | Pass |
-| Party Size (Negative party) |Display | Message The number of customers must be greater than 0. | FAIL |
+| Party Size (Negative party) |Display | Message The number of customers must be greater than 0. | PASS |
 | Email | Display| The user should see this email |PASS|
 | Email | Input| The user can change an email up to 254 characters | PASS |
 | Email missing | Display |  Message Please field in this field | Pass |
@@ -148,7 +148,7 @@
 | Booking date | Display | The user should see the date for their booking |PASS|
 | Booking date | Input | The user can change the date format dd/mm/yyyy | PASS |
 | Booking date missing | Input | Message Please field in this field | PASS |
-| Booking date made in the past| Input | Message The booking date cannot be in the past.| FAIL |
+| Booking date made in the past| Input | Message The booking date cannot be in the past.| PASS |
 | Booking time | Display | The user should see the booking time | PASS |
 | Booking time | Input |The user can change the time to any of the provided options | PASS|
 | Booking time missing | Input| Message Please field in this field | PASS |
@@ -185,9 +185,11 @@
 
 * When asked to enter the booking date, it is possible to enter past dates.
 * When asked to enter the size of the party, it is possible to enter a negative number.
+* Message is displayed as warning when entering a date in the past or a negative number for the party size.
+* Message is displayed as warning, when editing a past booking.
 
 ## Unresolved Bugs
 
-* Message not displayed as warning when entering a date in the past or a negative number for the party size.
-* Message not displayed as warning, when the booking is past.
+
+
 

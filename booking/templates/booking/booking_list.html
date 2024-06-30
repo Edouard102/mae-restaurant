@@ -5,6 +5,20 @@
 
 {% block content %}
 <div class="row m-5">
+  
+    <!-- Display messages -->
+    {% if messages %}
+    <div class="row mb-3">
+        <div class="col-12">
+            {% for message in messages %}
+                <div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-info{% endif %}" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
     <div class="col-12 text-left m-2">
 
     <!-- Button to add/make a booking -->
